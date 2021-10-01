@@ -14,7 +14,7 @@ JavaScript 30為外國工程師發起的活動，藉由每天一個小練習增�
 
 ##  學習方式
 作者原本的檔案有兩包HTML，分別為半成品`index-START`及完成品`index-FINISH`，
-看懂成品後練習不看`index-FINISH`從`index-START`寫到完成，最後自己寫出的HTML檔名為`index-MYSELF`
+練習看懂成品後練習不看`index-FINISH`從`index-START`寫到完成，最後產出的HTML檔名為`index-MYSELF`
 
 ### 每日demo列表：
 
