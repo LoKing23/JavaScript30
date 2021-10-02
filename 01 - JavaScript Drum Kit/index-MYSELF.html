@@ -58,7 +58,27 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
+  (function(){
+  function removePlaying(e){
+    e.target.classList.remove('playing');
+  }
+  function play(e){
+      // 點擊window:1加上playing class 2播放音樂
+      const keyCode = e.keyCode;
+      const div = document.querySelector(`div[data-key="${keyCode}"]`);
+      const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+      if(div === null || audio === null) return;
 
+      div.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
+  const key = document.querySelectorAll('.key');
+  key.forEach(key => {
+    key.addEventListener('transitionend',removePlaying);
+  })
+  window.addEventListener('keydown', play);
+  })()
 </script>
 
 
