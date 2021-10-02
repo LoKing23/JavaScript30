@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>測試audio</title>
+</head>
+<body>
+<h2>1</h2>
+<audio data-num = "0" controls src="Blackberry K Two - Squadda B.mp3"></audio>
+<h2>2</h2>
+<audio data-num = "1" controls src="O Boy - Jeremy Black.mp3"></audio>
+<h2>3</h2>
+<audio data-num = "2" controls src="Blackberry K Two - Squadda B.mp3"></audio>
+<h2>4</h2>
+<audio data-num = "3" controls src="Blackberry K Two - Squadda B.mp3"></audio>
+<script>
+  const audio = document.querySelectorAll('audio');
+  const audioLen = audio.length - 1;
+  function playNextSong(e){
+    // console.log(e.target.dataset.num);
+    const eNum = +e.target.dataset.num;
+    if(eNum < audioLen){
+      const thatSong = document.querySelector(`audio[data-num="${eNum + 1}"]`);
+      console.log(thatSong);
+      thatSong.play();
+    }else{
+      const thatSong = document.querySelector(`audio[data-num="0"]`);
+      thatSong.play();
+    }
+  }
+  
+  audio.forEach(item => {
+    console.log(item);
+    item.addEventListener('pause',playNextSong)
+  });
+</script>
+</body>
+</html>
