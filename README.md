@@ -6,7 +6,7 @@
 JavaScript 30為外國工程師發起的活動，藉由每天一個小練習增加對JavaScript的熟悉度
 
 - JavaScript 30 活動官網：https://javascript30.com/
-- JavaScript 30 每日練習教材：https://javascript30.com/
+- JavaScript 30 每日練習教材：https://github.com/wesbos/JavaScript30
 
 中文資源
 - Alex宅幹嘛 - 深入淺出JavaScript30：https://www.youtube.com/watch?v=f2ttaeDHzwE&list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq&ab_channel=Alex%E5%AE%85%E5%B9%B9%E5%98%9B
@@ -20,7 +20,7 @@ JavaScript 30為外國工程師發起的活動，藉由每天一個小練習增�
 
 | No | 主題 | 筆記 | DEMO |
 | --- | --- | --- | --- |
-| 01 | JavaScript Drum Kit |  | |
+| 01 | JavaScript Drum Kit |[筆記](https://github.com/LoKing23/JavaScript30/blob/master/01%20-%20JavaScript%20Drum%20Kit/NOTE.md)  | [demo](https://loking23.github.io/JavaScript30/01%20-%20JavaScript%20Drum%20Kit/index-MYSELF.html)|
 | 02 | JS and CSS Clock || |
 | 03 | CSS Variables | | |
 | 04 | Array Cardio Day 1 | | |
