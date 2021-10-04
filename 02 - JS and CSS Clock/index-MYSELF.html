@@ -111,11 +111,32 @@
     const second = document.querySelector('.second-hand');
     const min = document.querySelector('.min-hand');
     const hour = document.querySelector('.hour-hand');
-    console.log(second, min, hour);
+    // console.log(second, min, hour);
+    
+    function showTime(){
+      const time = new Date();
+      const nowSecond = time.getSeconds();
+      const nowMin = time.getMinutes();
+      const nowHour = time.getHours();
 
+      let secDegree = nowSecond * 6;
+      let minDegree = nowMin * 6 + 6 * (nowSecond/60);
+      let hourDegree = nowHour * 30 + 30 * (nowMin/60);
 
-
-
+      //requestAnimationFrame一秒刷新60次，因為我的螢幕60Hz
+      // console.log(hourDegree, minDegree, secDegree);
+      second.style.transform = `rotate(${secDegree}deg)`;
+      min.style.transform = `rotate(${minDegree}deg)`;
+      hour.style.transform = `rotate(${hourDegree}deg)`;
+      // setTimeout(showTime,1000);
+      requestAnimationFrame(showTime)
+    } 
+    // setInterva
+    // setInterval(showTime,1000);
+    
+    // setTimeout
+    // setTimeout(showTime,1000);
+    requestAnimationFrame(showTime)
   })()
   </script>
 </body>
