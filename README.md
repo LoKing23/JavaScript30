@@ -23,7 +23,7 @@ JavaScript 30為外國工程師發起的活動，藉由每天一個小練習增�
 | 01 | JavaScript Drum Kit |[筆記](https://github.com/LoKing23/JavaScript30/blob/master/01%20-%20JavaScript%20Drum%20Kit/NOTE.md)  | [demo](https://loking23.github.io/JavaScript30/01%20-%20JavaScript%20Drum%20Kit/index-MYSELF.html)|
 | 02 | JS and CSS Clock |[筆記](https://github.com/LoKing23/JavaScript30/blob/master/02%20-%20JS%20and%20CSS%20Clock/NOTE.md)|[demo](https://loking23.github.io/JavaScript30/02%20-%20JS%20and%20CSS%20Clock/index-MYSELF.html) |
 | 03 | CSS Variables |[筆記](https://github.com/LoKing23/JavaScript30/blob/master/03%20-%20CSS%20Variables/NOTE.md) |[demo](https://loking23.github.io/JavaScript30/03%20-%20CSS%20Variables/index-MYSELF.html) |
-| 04 | Array Cardio Day 1 | | |
+| 04 | Array Cardio Day 1 |[筆記]() |[demo]() |
 | 05 | Flex Panel Gallery | |  |
 | 06 | Type Ahead |  |  |
 | 07 | Array Cardio Day 2 |  | |
