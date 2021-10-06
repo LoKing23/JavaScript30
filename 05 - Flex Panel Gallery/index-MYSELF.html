@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flex Panels 💪</title>
+  <title>Flex Panels 💪 - MYSELF</title>
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -25,10 +25,17 @@
 
     .panels {
       min-height: 100vh;
-      overflow: hidden;
+      /* overflow: hidden; */
+      display: flex; 
     }
 
     .panel {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
       background: #6B0F9C;
       box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
       color: white;
@@ -72,7 +79,12 @@
     .panel.open {
       font-size: 40px;
     }
-
+    .open{
+      flex-grow: 5;
+    }
+    .panel >p:nth-child(1){transform: translateY(-900%);}
+    .panel >p:nth-child(3){transform: translateY(900%);}
+    .open-active >p:nth-child(odd){transform: translateY(0%);}
   </style>
 
 
@@ -105,7 +117,21 @@
   </div>
 
   <script>
-
+    const panels = document.querySelectorAll('.panel');
+    panels.forEach(panel=> panel.addEventListener('click',clickHandler));
+    function clickHandler(){
+      console.log(this);
+      this.classList.toggle('open');
+    }
+    panels.forEach(panel => panel.addEventListener('transitionend',transitionendHandler));
+    function transitionendHandler(e){
+      // 重要步驟，transitionend觸發次數要看transition做了幾次
+      // 使用toggle需要特別注意，若是偶數個動畫將會沒效果（一次加一次減少剛好抵銷）
+      console.log(e);//一次事件觸發兩次動畫剛好抵銷toggleClass
+      if(e.propertyName == 'font-size'){
+        this.classList.toggle('open-active');
+      }
+    }
   </script>
 
 
