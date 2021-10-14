@@ -7,8 +7,62 @@
 <body>
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
-</script>
+  ;(function(){
+    const canvas = document.querySelector('#draw');
+    let ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.lineWidth = 20;
+    
+    let lastX = 0;
+    let lastY = 0;
+    let hue = 0;
+    let canDraw = false;
+    let width = 40;
+    let widthChange = 1;
 
+    canvas.addEventListener('mousemove', (e) => {
+      if(!canDraw)  return;
+      //開始畫圖
+      ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+      ctx.lineWidth = width;
+      ctx.lineWidth = 
+      console.log(e);
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.clientX, e.clientY);
+      ctx.stroke();
+
+      hue++;
+      if(hue >= 360){
+        hue = 0;
+      }
+      //讓width在0與50來回
+      
+      if(width <= 0 || width >= 50){
+        widthChange *= -1;
+      }
+      width+=widthChange;
+
+      lastX = e.clientX;
+      lastY = e.clientY;
+      // [lastX, lastY] = [e.client, e.clientY];
+    });
+    canvas.addEventListener('mousedown', (e)=>{
+      canDraw = true;
+      [lastX, lastY] =  [e.clientX, e.clientY];
+    });
+    canvas.addEventListener('mouseleave', () => canDraw = false);
+    canvas.addEventListener('mouseup', () => canDraw = false);
+    window.addEventListener('resize',(e)=>{
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    })
+  })()
+  
+</script>
 <style>
   html, body {
     margin: 0;
